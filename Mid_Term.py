@@ -1,6 +1,3 @@
-import datetime
-import random
-
 class Star_Cinema:
     _hall_list = []
     def entry_hall(self,hall):
@@ -86,23 +83,15 @@ class Hall(Star_Cinema):
                 print(self.__seats[id][row][col], end=' ')
             print()
 
-def generate_random_datetime():
-    day = random.randint(1, 28)
-    hour = random.randint(0, 23)
-    minute = random.randint(0, 59)
-    second = random.randint(0, 59)
-    random_datetime = datetime.datetime(2024, 4, day, hour, minute, second)
-    return random_datetime
-
 hall1 = Hall(3, 5, "A10")
 hall2 = Hall(5, 5, "B10")
 cinema = Star_Cinema()
 cinema.entry_hall(hall1)
 cinema.entry_hall(hall2)
-hall1.entry_show('123', "Kala Manush", generate_random_datetime())
-hall1.entry_show('456', "Ajob Bedi", generate_random_datetime())
-hall2.entry_show('500', "Gojob Beda", generate_random_datetime())
-hall2.entry_show('511', "Manob Badur", generate_random_datetime())
+hall1.entry_show('123', "Kala Manush", "2024-04-01 09:54:15")
+hall1.entry_show('456', "Ajob Bedi", "2024-04-01 09:54:15")
+hall2.entry_show('500', "Gojob Beda", "2024-04-01 09:54:15")
+hall2.entry_show('511', "Manob Badur", "2024-04-01 09:54:15")
 
 while True:
     print("Options:")
